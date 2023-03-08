@@ -24,11 +24,28 @@ function render(e){
             tbl+="<table border>"
             tbl+="<th>Nombre</th><th>Localidad</th><th>Pais</th>"
             datos.forEach(el => {
-              //console.log(el.children)
-              tbl+="<tr>" 
-              tbl+=`<td>${el.children[1].textContent}</td>`
-              tbl+=`<td>${el.children[5].textContent}</td>`
-              tbl+=`<td>${el.children[8].textContent}</td>`
+              /* console.log(el.children)
+              let array=Array.from(el.children)
+              console.log(el.getElementsByTagName("PAIS")[0].textContent)
+              //console.log(array)
+              tbl+="<tr>"
+              //console.log(el.children.nodeName("NOMBRE"))
+              /* array.forEach(e => {
+                
+                if (e.nodeName=="NOMBRE"){
+                  tbl+=`<td>${e.textContent}</td>`
+                }
+                if (e.nodeName=="LOCALIDAD"){
+                  tbl+=`<td>${e.textContent}</td>`
+                }
+                if (e.nodeName=="PAIS"){
+                  tbl+=`<td>${e.textContent}</td>`
+                }
+              }) */ 
+              tbl+="<tr>"
+              tbl+=`<td>${el.getElementsByTagName("NOMBRE")[0].textContent}</td>`
+              tbl+=`<td>${el.getElementsByTagName("LOCALIDAD")[0].textContent}</td>`
+              tbl+=`<td>${el.getElementsByTagName("PAIS")[0].textContent}</td>`
               tbl+="</tr>" 
             })
             tbl+="</table>"
