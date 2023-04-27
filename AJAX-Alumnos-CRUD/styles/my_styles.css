@@ -1,0 +1,260 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6rem;
+    --color-fondo1: #285f85;
+    --color-fondo2: #97a2aa;
+    --color-fondo-input: rgb(199, 199, 228);
+    --color-boton: rgba(255, 60, 46, 0.959);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--color-fondo1);
+}
+
+/*===================== Estilos para el body ============*/
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*===================== Estilos para la cabecera y el pie ============*/
+header,
+footer {
+    width: 100vw;
+    height: auto;
+    max-height: 4rem;
+    padding: 1rem 0;
+    /* color de fondo navegadores antiguos*/
+    background: var(--color-fondo1);
+    background: -webkit-linear-gradient(to right, #285f85, #97a2aa);
+    background: -o-linear-gradient(to right, #285f85, #97a2aa);
+    background: -moz-linear-gradient(to right, #285f85, #97a2aa);
+    background: linear-gradient(to right, var(--color-fondo1), var(--color-fondo2));
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+/* ====================== Estilos para el main ======================*/
+main {
+    flex: 2 1 auto;
+    /*flex-grow: 2;
+    flex-shrink: 1; 
+    flex-basis: auto;*/
+    margin: 0 auto;
+    width: 80vw;
+    height: auto;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor {
+    width: max-content;
+    height: auto;
+    display: flex;
+    /*flex-grow: column nowrap;*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+/* ====================== Estilos del formulario =======================*/
+form {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    gap: 1rem;
+    padding: .5rem 1rem;
+}
+
+fieldset {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.campo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem;
+}
+
+label {
+    width: 100px;
+}
+
+input,
+select {
+    border: none;
+    outline: 1px solid #666;
+    border-radius: 5px;
+    padding: .25rem;
+}
+
+input[type="radio"] {
+    outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 200px;
+}
+
+input[type="date"] {
+    height: max-content;
+}
+
+.campoRadio {
+    display: flex;
+    justify-content: left;
+    gap: 3rem;
+}
+
+.campoRadio label {
+    width: max-content;
+    margin-right: .5rem;
+}
+
+/* estilos para los botones */
+.centrado {
+    /* margin: 0 auto; */
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.boton {
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    color: white;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 3px 4px 3px #666;
+    transition: all .5s linear;
+}
+
+#add {
+    background-color: var(--color-fondo1);
+    border-color: var(--color-fondo1);
+}
+
+#limpiar {
+    background-color: var(--color-boton);
+    border-color: var(--color-boton);
+}
+
+#add:hover {
+    background-color: white;
+    border-color: #285f85;
+    color: var(--color-fondo1);
+}
+
+#limpiar:hover {
+    border-color: var(--color-boton);
+    color: var(--color-boton);
+    background-color: white;
+}
+
+input:required {
+    background-color: rgba(255, 166, 0, 0.171);
+}
+
+input:focus {
+    outline-color: var(--color-fondo1);
+    background-color: var(--color-fondo-input);
+}
+
+input:focus:valid {
+    outline-color: green;
+}
+
+input:focus:not(:valid) {
+    outline-color: red;
+}
+
+/* ======================== Estilos tabla =========================*/
+.estilo-tabla {
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    min-width: 400px;
+    width: auto;
+    box-shadow: 0 5px 50px rgb(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+thead,
+th {
+    background-color: var(--color-fondo1);
+    color: #fff;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 15px 20px;
+}
+
+tbody tr,
+td,
+th {
+    border: 1px solid #ddd;
+    /*border-bottom: 1px solid #dddddd;*/
+}
+
+tbody tr:nth-child(even),
+tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+.delete{
+    background-color: red;
+    color:white;
+    padding: 3px;
+    text-decoration: none;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+.update{
+    background-color:darkblue;
+    color:white;
+    padding: 3px;
+    text-decoration: none;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+.desactivado{
+    background-color:#555;
+    color:white;
+    padding: 3px;
+    text-decoration: none;
+    margin: 3px;
+    border-radius: 5px;
+}
